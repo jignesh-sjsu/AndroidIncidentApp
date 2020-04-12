@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="sjsu.cmpe277.myandroidmulti.Title.TitleFragment"
+        android:label="Main Page"
+        tools:layout="@layout/fragment_title">
+        <action
+            android:id="@+id/action_titleFragment_to_questionFragment"
+            app:destination="@id/questionFragment"
+            app:enterAnim="@anim/fragment_fade_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="sjsu.cmpe277.myandroidmulti.Question.QuestionFragment"
+        android:label="Questionaire"
+        tools:layout="@layout/fragment_question">
+        <action
+            android:id="@+id/action_questionFragment_to_answerOneFragment2"
+            app:destination="@id/answerOneFragment" />
+        <action
+            android:id="@+id/action_questionFragment_to_answerTwoFragment2"
+            app:destination="@id/answerTwoFragment" />
+        <argument
+            android:name="riskscore"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_questionFragment_to_answerThreeFragment2"
+            app:destination="@id/answerThreeFragment2" />
+        <action
+            android:id="@+id/action_questionFragment_to_answerTrafficFragment"
+            app:destination="@id/answerTrafficFragment" />
+        <action
+            android:id="@+id/action_questionFragment_to_answerUtilityFragment"
+            app:destination="@id/answerUtilityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/answerOneFragment"
+        android:name="sjsu.cmpe277.myandroidmulti.AnswerMedicalFragment"
+        android:label="Request Medical Assistace"
+        tools:layout="@layout/fragment_answer_medical">
+        <action
+            android:id="@+id/action_answerOneFragment_to_answerFinalFragment"
+            app:destination="@id/answerFinalFragment" />
+        <argument
+            android:name="option"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/answerTwoFragment"
+        android:name="sjsu.cmpe277.myandroidmulti.AnswerFireFragment"
+        android:label="request Fire Assistance"
+        tools:layout="@layout/fragment_answer_fire">
+        <action
+            android:id="@+id/action_answerTwoFragment_to_answerFinalFragment"
+            app:destination="@id/answerFinalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="sjsu.cmpe277.myandroidmulti.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/drawOneFragment"
+        android:name="sjsu.cmpe277.myandroidmulti.DrawOneFragment"
+        android:label="fragment_draw_one"
+        tools:layout="@layout/fragment_draw_one" />
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="sjsu.cmpe277.myandroidmulti.Network.WeatherFragment"
+        android:label="weather_fragment"
+        tools:layout="@layout/weather_fragment" />
+    <fragment
+        android:id="@+id/answerThreeFragment2"
+        android:name="sjsu.cmpe277.myandroidmulti.AnswerPoliceFragment"
+        android:label="Request Police Assistance"
+        tools:layout="@layout/fragment_answer_police">
+        <action
+            android:id="@+id/action_answerThreeFragment2_to_answerFinalFragment"
+            app:destination="@id/answerFinalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/answerTrafficFragment"
+        android:name="sjsu.cmpe277.myandroidmulti.AnswerTrafficFragment"
+        android:label="Request Traffic Assistance"
+        tools:layout="@layout/fragment_answer_traffic">
+        <action
+            android:id="@+id/action_answerTrafficFragment_to_answerFinalFragment"
+            app:destination="@id/answerFinalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/answerUtilityFragment"
+        android:name="sjsu.cmpe277.myandroidmulti.AnswerUtilityFragment"
+        android:label="Request Utility Assistance"
+        tools:layout="@layout/fragment_answer_utility">
+        <action
+            android:id="@+id/action_answerUtilityFragment_to_answerFinalFragment"
+            app:destination="@id/answerFinalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/answerFinalFragment"
+        android:name="sjsu.cmpe277.myandroidmulti.AnswerFinalFragment"
+        android:label="fragment_answer_final"
+        tools:layout="@layout/fragment_answer_final" >
+        <action
+            android:id="@+id/action_answerFinalFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+        <argument
+            android:name="option"
+            app:argType="integer" />
+    </fragment>
+</navigation>

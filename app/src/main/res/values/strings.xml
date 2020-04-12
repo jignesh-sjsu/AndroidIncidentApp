@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">MyAndroidMulti</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button_name">Call SOS</string>
+    <string name="answer1">Please select your medical emergency</string>
+    <string name="answer2">Please select your fire emergency</string>
+    <string name="answer3">Please select your police emergency</string>
+    <string name="answer4">Please select your traffic emergency</string>
+    <string name="answer5">Please select your utility emergency</string>
+    <string name="final_answer">The following information will be sent to the authorities</string>
+    <string name="medical_radio_option1">Breathing problems</string>
+    <string name="medical_radio_option2">Unconscious</string>
+    <string name="medical_radio_option3">Injury</string>
+    <string name="medical_radio_option4">fever</string>
+    <string name="fire_radio_option1">Collapsed Building</string>
+    <string name="fire_radio_option2">Trapped People</string>
+    <string name="fire_radio_option3">Fire near chemical/hazardous material</string>
+    <string name="police_radio_option1">Looting</string>
+    <string name="police_radio_option2">Shots fired</string>
+    <string name="police_radio_option3">Vandalism</string>
+    <string name="police_radio_option4">Assault</string>
+    <string name="police_radio_option5">Gang violence</string>
+    <string name="police_radio_option6">Break in</string>
+    <string name="traffic_radio_option1">Accident</string>
+    <string name="traffic_radio_option2">Road Damaged</string>
+    <string name="traffic_radio_option3">Road impassable</string>
+    <string name="utility_radio_option1">Power out</string>
+    <string name="utility_radio_option2">Water main break</string>
+    <string name="utility_radio_option3">Gas main break</string>
+    <string name="utility_radio_option4">Internet and Telephone outage</string>
+    <string name="button_submit">Submit</string>
+    <string name="button_option1">Medical</string>
+    <string name="button_option2">Fire</string>
+    <string name="button_option3">Police</string>
+    <string name="button_option4">Traffic</string>
+    <string name="button_option5">Utility</string>
+    <string name="text_question">Please state your emergency</string>
+    <string name="button_next">Next</string>
+    <string name="button_thankyou">Thank you</string>
+    <string name="about_text">About the App Designer</string>
+    <string name="about_title">About</string>
+    <string name="drawone_menu">Draw Item One</string>
+    <string name="drawone_text">You Selected Draw One</string>
+    <string name="input_yourname">Enter your name</string>
+    <string name="image_sos">SOS Image</string>
+    <string name="text_enterphonenumber">Enter your phone number</string>
+    <string name="text_riskscorelabel">Your risk score</string>
+    <string name="button_getscore">Get risk score</string>
+</resources>
