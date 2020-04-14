@@ -51,26 +51,31 @@ class QuestionFragment : Fragment() {
 
         binding.buttonMedical.setOnClickListener {view: View ->
             emergencyOption.emergency.value = "Medical Emergency"
+            emergencyOption.phoneNumber.value = binding.phoneText.text.toString()
             Navigation.findNavController(view).navigate(R.id.action_questionFragment_to_answerOneFragment2)
         }
 
         binding.buttonFire.setOnClickListener {view: View ->
             emergencyOption.emergency.value = "Fire Emergency"
+            emergencyOption.phoneNumber.value = binding.phoneText.text.toString()
             Navigation.findNavController(view).navigate(R.id.action_questionFragment_to_answerTwoFragment2)
         }
 
         binding.buttonPolice.setOnClickListener {view: View ->
             emergencyOption.emergency.value = "Police Emergency"
+            emergencyOption.phoneNumber.value = binding.phoneText.text.toString()
             Navigation.findNavController(view).navigate(R.id.action_questionFragment_to_answerThreeFragment2)
         }
 
         binding.buttonTraffic.setOnClickListener {view: View ->
             emergencyOption.emergency.value = "Traffic Emergency"
+            emergencyOption.phoneNumber.value = binding.phoneText.text.toString()
             Navigation.findNavController(view).navigate(R.id.action_questionFragment_to_answerTrafficFragment)
         }
 
         binding.buttonUtility.setOnClickListener {view: View ->
             emergencyOption.emergency.value = "Utility Emergency"
+            emergencyOption.phoneNumber.value = binding.phoneText.text.toString()
             Navigation.findNavController(view).navigate(R.id.action_questionFragment_to_answerUtilityFragment)
         }
 

@@ -55,7 +55,7 @@
     <fragment
         android:id="@+id/answerTwoFragment"
         android:name="sjsu.cmpe277.myandroidmulti.AnswerFireFragment"
-        android:label="request Fire Assistance"
+        android:label="Request Fire Assistance"
         tools:layout="@layout/fragment_answer_fire">
         <action
             android:id="@+id/action_answerTwoFragment_to_answerFinalFragment"
@@ -106,8 +106,8 @@
     <fragment
         android:id="@+id/answerFinalFragment"
         android:name="sjsu.cmpe277.myandroidmulti.AnswerFinalFragment"
-        android:label="fragment_answer_final"
-        tools:layout="@layout/fragment_answer_final" >
+        android:label="@string/button_thankyou"
+        tools:layout="@layout/fragment_answer_final">
         <action
             android:id="@+id/action_answerFinalFragment_to_titleFragment"
             app:destination="@id/titleFragment" />

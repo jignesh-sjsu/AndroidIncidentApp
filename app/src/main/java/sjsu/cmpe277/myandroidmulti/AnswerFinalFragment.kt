@@ -59,7 +59,7 @@ class AnswerFinalFragment : Fragment() {
             binding.textViewEmergencySubtype.text = newSubtype.toString()
         })
 
-        name.yourname.observe(viewLifecycleOwner, Observer { newName ->
+        viewModel.name.observe(viewLifecycleOwner, Observer { newName ->
             binding.textViewName.text = newName.toString()
         })
 

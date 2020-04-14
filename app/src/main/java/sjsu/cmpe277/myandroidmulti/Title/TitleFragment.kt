@@ -34,7 +34,7 @@ const val KEY_INPUTNAME = "inputname_key"
  */
 class TitleFragment : Fragment() {
 
-//    private lateinit var name: AnswerFinalFragmentViewModel
+    private lateinit var yourName: AnswerFinalFragmentViewModel
 
 //    private lateinit var binding: FragmentTitleBinding
 
@@ -71,9 +71,13 @@ class TitleFragment : Fragment() {
             binding.textViewriskscore.text = newRiskscore.toString()
         })
 
+        yourName = activity?.run {
+            ViewModelProviders.of(this).get(AnswerFinalFragmentViewModel::class.java)
+        } ?: throw Exception("Invalid Activity")
+
         binding.button.setOnClickListener { view: View ->
             //viewModel.yourname = binding.inputName.text.toString()
-            viewModel.yourname.value = binding.inputName.text.toString()
+            yourName.name.value = binding.inputName.text.toString()
 //            name.name.value = viewModel.yourname.value
 //            val action = TitleFragmentDirections.actionTitleFragmentToQuestionFragment(riskscore = viewModel.riskscore.value!!)
 //            view.findNavController().navigate(action)
