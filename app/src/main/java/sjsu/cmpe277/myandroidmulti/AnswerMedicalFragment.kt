@@ -25,7 +25,7 @@ import sjsu.cmpe277.myandroidmulti.databinding.FragmentAnswerMedicalBinding
  * Use the [AnswerMedicalFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class AnswerMedicalFragment() : Fragment(), Parcelable {
+class AnswerMedicalFragment() : Fragment() {
     // TODO: Rename and change types of parameters
 //    private var param1: String? = null
 //    private var param2: String? = null
@@ -33,16 +33,13 @@ class AnswerMedicalFragment() : Fragment(), Parcelable {
 
     private lateinit var subtypeOption: AnswerFinalFragmentViewModel
 
-    constructor(parcel: Parcel) : this() {
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
 //            param1 = it.getString(ARG_PARAM1)
 //            param2 = it.getString(ARG_PARAM2)
         }
-    }
+        }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -59,7 +56,8 @@ class AnswerMedicalFragment() : Fragment(), Parcelable {
             R.layout.fragment_answer_medical,container,false)
 
         binding.buttonNext.setOnClickListener {view: View ->
-          val checkedId = binding.medicalRadioGroup.checkedRadioButtonId
+            val checkedId = binding.medicalRadioGroup.checkedRadioButtonId
+            val checkNoOfPatients = binding.editText
                 if (-1 != checkedId) {
                     var answerIndex = 0
                     when (checkedId) {
@@ -71,6 +69,8 @@ class AnswerMedicalFragment() : Fragment(), Parcelable {
                     when (answerIndex) {
                         1 -> {
                             subtypeOption.subtype.value = "Breathing Problem"
+                            subtypeOption.medicalPatients.value = binding.editText.text.toString()
+                            subtypeOption.medicalFever.value = binding.editText3.text.toString()
                             Navigation.findNavController(view).navigate(R.id.action_answerOneFragment_to_answerFinalFragment)
                         }
                         2 -> {
@@ -90,23 +90,5 @@ class AnswerMedicalFragment() : Fragment(), Parcelable {
 
         }
         return binding.root
-    }
-
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
-
-    }
-
-    override fun describeContents(): Int {
-        return 0
-    }
-
-    companion object CREATOR : Parcelable.Creator<AnswerMedicalFragment> {
-        override fun createFromParcel(parcel: Parcel): AnswerMedicalFragment {
-            return AnswerMedicalFragment(parcel)
-        }
-
-        override fun newArray(size: Int): Array<AnswerMedicalFragment?> {
-            return arrayOfNulls(size)
-        }
     }
 }

@@ -37,7 +37,6 @@ class WeatherViewModel : ViewModel() {
                     //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
                     _response.value = response.body()
                 }
-
             }
         )
     }

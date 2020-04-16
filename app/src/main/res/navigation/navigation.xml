@@ -39,6 +39,12 @@
         <action
             android:id="@+id/action_questionFragment_to_answerUtilityFragment"
             app:destination="@id/answerUtilityFragment" />
+        <action
+            android:id="@+id/action_questionFragment_to_answerTrappedFragment"
+            app:destination="@id/answerTrappedFragment" />
+        <action
+            android:id="@+id/action_questionFragment_to_answerTrappedFragment2"
+            app:destination="@id/answerTrappedFragment" />
     </fragment>
     <fragment
         android:id="@+id/answerOneFragment"
@@ -114,5 +120,14 @@
         <argument
             android:name="option"
             app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/answerTrappedFragment"
+        android:name="sjsu.cmpe277.myandroidmulti.AnswerTrappedFragment"
+        android:label="@string/button_trapped"
+        tools:layout="@layout/fragment_answer_trapped">
+        <action
+            android:id="@+id/action_answerTrappedFragment_to_answerFinalFragment"
+            app:destination="@id/answerFinalFragment" />
     </fragment>
 </navigation>

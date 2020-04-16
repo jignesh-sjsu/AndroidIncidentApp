@@ -65,6 +65,8 @@ class AnswerFireFragment : Fragment() {
                 when (answerIndex) {
                     1 -> {
                         subtypeOption.subtype.value = "Collapsed building"
+                        subtypeOption.additionalTextView1.value = "No of buildings"
+                        subtypeOption.additionalTextView2.value = binding.editText4.text.toString()
                         Navigation.findNavController(view).navigate(R.id.action_answerTwoFragment_to_answerFinalFragment)
                     }
                     2 -> {
@@ -73,6 +75,8 @@ class AnswerFireFragment : Fragment() {
                     }
                     else -> {
                         subtypeOption.subtype.value = "Fire near chemical/hazardous material"
+                        subtypeOption.additionalTextView1.value = "Name of chemical"
+                        subtypeOption.additionalTextView2.value = binding.chemicalsAnswer.text.toString()
                         Navigation.findNavController(view).navigate(R.id.action_answerTwoFragment_to_answerFinalFragment)
                     }
                 }

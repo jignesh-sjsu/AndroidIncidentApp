@@ -39,15 +39,18 @@ class QuestionFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_question, container, false)
-
-        emergencyOption = activity?.run {
+           emergencyOption = activity?.run {
             ViewModelProviders.of(this).get(AnswerFinalFragmentViewModel::class.java)
         } ?: throw Exception("Invalid Activity")
 
         val binding = DataBindingUtil.inflate<FragmentQuestionBinding>(inflater,
             R.layout.fragment_question,container,false)
+
+        binding.buttonTrapped.setOnClickListener {view: View ->
+            emergencyOption.emergency.value = "Trapped"
+            emergencyOption.phoneNumber.value = binding.phoneText.text.toString()
+            Navigation.findNavController(view).navigate(R.id.action_questionFragment_to_answerTrappedFragment2)
+        }
 
         binding.buttonMedical.setOnClickListener {view: View ->
             emergencyOption.emergency.value = "Medical Emergency"

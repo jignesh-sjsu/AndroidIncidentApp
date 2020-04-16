@@ -53,6 +53,10 @@ class AnswerTrafficFragment : Fragment() {
                 when (answerIndex) {
                     1 -> {
                         subtypeOption.subtype.value = "Accident"
+                        subtypeOption.additionalTextView1.value = "No of cars involved:"
+                        subtypeOption.additionalTextView3.value = "No of people injured:"
+                        subtypeOption.additionalTextView2.value = binding.accidentAnswer1.text.toString()
+                        subtypeOption.additionalTextView4.value = binding.accidentAnswer2.text.toString()
                         Navigation.findNavController(view)
                             .navigate(R.id.action_answerTrafficFragment_to_answerFinalFragment)
                     }

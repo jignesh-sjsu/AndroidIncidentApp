@@ -6,13 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.fragment_answer_final.*
-import sjsu.cmpe277.myandroidmulti.Question.QuestionFragment
-import sjsu.cmpe277.myandroidmulti.Title.TitleViewModel
 import sjsu.cmpe277.myandroidmulti.databinding.FragmentAnswerFinalBinding
 
 /**
@@ -20,9 +16,10 @@ import sjsu.cmpe277.myandroidmulti.databinding.FragmentAnswerFinalBinding
  */
 class AnswerFinalFragment : Fragment() {
 
-    private lateinit var binding: FragmentAnswerFinalBinding
+//    lateinit var followerChannel: NotificationChannel
+
+//    private lateinit var binding: FragmentAnswerFinalBinding
     private lateinit var viewModel: AnswerFinalFragmentViewModel
-    private lateinit var name: TitleViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,15 +37,13 @@ class AnswerFinalFragment : Fragment() {
         // Inflate the layout for this fragment
         // return inflater.inflate(R.layout.fragment_answer_final, container, false)
 
-        binding = DataBindingUtil.inflate<FragmentAnswerFinalBinding>(inflater,
+//        followerChannel = FOLLOWERS_CHANNEL_ID; "followers"; NotificationManager.IMPORTANCE_DEFAULT
+
+        val binding = DataBindingUtil.inflate<FragmentAnswerFinalBinding>(inflater,
             R.layout.fragment_answer_final, container, false)
 
         viewModel = activity?.run {
             ViewModelProviders.of(this).get(AnswerFinalFragmentViewModel::class.java)
-        } ?: throw Exception("Invalid Activity")
-
-        name = activity?.run {
-            ViewModelProviders.of(this).get(TitleViewModel::class.java)
         } ?: throw Exception("Invalid Activity")
 
         viewModel.emergency.observe(viewLifecycleOwner, Observer { newEmergency ->
@@ -63,14 +58,31 @@ class AnswerFinalFragment : Fragment() {
             binding.textViewName.text = newName.toString()
         })
 
+        viewModel.additionalTextView1.observe(viewLifecycleOwner, Observer { tv12 ->
+            binding.textView12.text = tv12.toString()
+        })
+
+        viewModel.additionalTextView2.observe(viewLifecycleOwner, Observer { tv13 ->
+            binding.textView13.text = tv13.toString()
+        })
+
+        viewModel.additionalTextView3.observe(viewLifecycleOwner, Observer { tv15 ->
+            binding.textView15.text = tv15.toString()
+        })
+
+        viewModel.additionalTextView4.observe(viewLifecycleOwner, Observer { tv16 ->
+            binding.textView16.text = tv16.toString()
+        })
+
         viewModel.phoneNumber.observe(viewLifecycleOwner, Observer { newPhoneNumber ->
             binding.textViewPhoneNumber.text = newPhoneNumber.toString()
         })
 
-
-      binding.buttonThankyou.setOnClickListener { view: View ->
-            Navigation.findNavController(view).navigate(R.id.action_answerFinalFragment_to_titleFragment)
+        binding.buttonThankyou.setOnClickListener { view: View ->
+          Navigation.findNavController(view).navigate(R.id.action_answerFinalFragment_to_titleFragment)
         }
+
         return binding.root
     }
+
 }

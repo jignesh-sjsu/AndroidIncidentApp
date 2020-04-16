@@ -10,17 +10,18 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="95dp"
-            android:layout_height="62dp"
+            android:id="@+id/imageView10"
+            android:layout_width="106dp"
+            android:layout_height="91dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/image_emergency"
+            android:src="@drawable/emergency1"
             app:layout_constraintBottom_toTopOf="@+id/phoneText"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.824"
-            app:srcCompat="@drawable/sos"
-            tools:ignore="ContentDescription"
-            tools:src="@drawable/sos" />
+            app:srcCompat="@drawable/emergency1" />
 
         <EditText
             android:id="@+id/phoneText"
@@ -28,27 +29,49 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="64dp"
             android:layout_marginEnd="64dp"
-            android:layout_marginBottom="12dp"
             android:autofillHints="1234567890"
             android:ems="10"
             android:hint="@string/text_enterphonenumber"
             android:inputType="textPersonName"
             app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView10"
             tools:ignore="TextFields" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:text="@string/text_question"
+            app:layout_constraintBottom_toTopOf="@+id/buttonTrapped"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneText" />
+
+        <Button
+            android:id="@+id/buttonTrapped"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_trapped"
             app:layout_constraintBottom_toTopOf="@+id/buttonMedical"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <Button
+            android:id="@+id/buttonMedical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_option1"
+            app:layout_constraintBottom_toTopOf="@+id/buttonFire"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonTrapped" />
 
         <Button
             android:id="@+id/buttonFire"
@@ -57,54 +80,42 @@
             android:text="@string/button_option2"
             app:layout_constraintBottom_toTopOf="@+id/buttonPolice"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.937" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonMedical" />
 
         <Button
             android:id="@+id/buttonPolice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="28dp"
             android:text="@string/button_option3"
             app:layout_constraintBottom_toTopOf="@+id/buttonTraffic"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/buttonMedical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="28dp"
-            android:text="@string/button_option1"
-            app:layout_constraintBottom_toTopOf="@+id/buttonFire"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonFire" />
 
         <Button
             android:id="@+id/buttonTraffic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="28dp"
             android:text="@string/button_option4"
             app:layout_constraintBottom_toTopOf="@+id/buttonUtility"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonPolice" />
 
         <Button
             android:id="@+id/buttonUtility"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="80dp"
             android:text="@string/button_option5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonTraffic" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

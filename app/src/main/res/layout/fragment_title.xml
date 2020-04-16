@@ -22,7 +22,7 @@
             tools:src="@drawable/sos" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonEmergency"
             android:layout_width="128dp"
             android:layout_height="54dp"
             android:layout_marginTop="20dp"

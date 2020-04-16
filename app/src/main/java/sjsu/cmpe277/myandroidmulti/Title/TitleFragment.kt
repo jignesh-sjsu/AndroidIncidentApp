@@ -75,16 +75,9 @@ class TitleFragment : Fragment() {
             ViewModelProviders.of(this).get(AnswerFinalFragmentViewModel::class.java)
         } ?: throw Exception("Invalid Activity")
 
-        binding.button.setOnClickListener { view: View ->
-            //viewModel.yourname = binding.inputName.text.toString()
+        binding.buttonEmergency.setOnClickListener { view: View ->
             yourName.name.value = binding.inputName.text.toString()
-//            name.name.value = viewModel.yourname.value
-//            val action = TitleFragmentDirections.actionTitleFragmentToQuestionFragment(riskscore = viewModel.riskscore.value!!)
-//            view.findNavController().navigate(action)
             Navigation.findNavController(view).navigate(R.id.action_titleFragment_to_questionFragment)
-            //view.findNavController().navigate(R.id.action_titleFragment_to_questionFragment)
-            //Navigation.findNavController(view).navigate(R.id.action_titleFragment_to_questionFragment)
-
         }
 
         binding.floatingActionButton.setOnClickListener { view ->

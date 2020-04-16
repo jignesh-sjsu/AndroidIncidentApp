@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
+import androidx.core.app.NotificationCompat
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
@@ -11,11 +12,14 @@ import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.findNavController //imported from androidx.navigation:navigation-ui-ktx
 import sjsu.cmpe277.myandroidmulti.databinding.ActivityMainBinding
+import sjsu.cmpe277.myandroidmulti.databinding.FragmentAnswerFinalBinding
 
 
 const val KEY_Data = "inputname_key"
 
 class MainActivity : AppCompatActivity() {
+
+//    private lateinit var notification: FragmentAnswerFinalBinding
 
     private lateinit var navController: NavController
     private lateinit var binding: ActivityMainBinding
@@ -46,8 +50,6 @@ class MainActivity : AppCompatActivity() {
             var restoredstr = savedInstanceState.getString(KEY_Data, "").toString()
             Log.i("MainActivity", restoredstr)
         }
-
-
 
     }
 
@@ -82,5 +84,16 @@ class MainActivity : AppCompatActivity() {
             Log.i("MainActivity", "onRestoreInstanceState not null")
         }
     }
+
+//    private fun addNotification() {
+//        var builder = NotificationCompat.Builder(this)
+//            .setSmallIcon(R.drawable.sos)
+//            .setContentTitle("Incident Report")
+//            .setContentText("Your incident has been notified to the authorities")
+//            .setStyle(
+//                NotificationCompat.BigTextStyle()
+//                .bigText("Much longer text that cannot fit one line..."))
+//            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+//    }
 
 }

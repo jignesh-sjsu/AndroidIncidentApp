@@ -3,17 +3,32 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="button_name">Call SOS</string>
-    <string name="answer1">Please select your medical emergency</string>
+    <string name="button_name">Emergency</string>
+    <string name="answer">Are you injured?</string>
+    <string name="answer1">Please select your most severe problem</string>
+    <string name="answer1_1">If in Shock Please specify the type of shock</string>
+    <string name="answer1_2">If in fever, Specify tempreture if Known</string>
     <string name="answer2">Please select your fire emergency</string>
+    <string name="answer2_2">How many building have collapsed?</string>
+    <string name="answer2_1">Please specify the chemicals if Known</string>
     <string name="answer3">Please select your police emergency</string>
     <string name="answer4">Please select your traffic emergency</string>
+    <string name="answer4_1">How many cars involved in accident?</string>
+    <string name="answer4_2">How many people injured in accident?</string>
     <string name="answer5">Please select your utility emergency</string>
+    <string name="answer5_1">Please specify the outage type</string>
     <string name="final_answer">The following information will be sent to the authorities</string>
+    <string name="trapped_radio_option1">Yes</string>
+    <string name="trapped_radio_option2">No</string>
     <string name="medical_radio_option1">Breathing problems</string>
     <string name="medical_radio_option2">Unconscious</string>
     <string name="medical_radio_option3">Injury</string>
-    <string name="medical_radio_option4">fever</string>
+    <string name="medical_radio_option4">Fever</string>
+    <string name="medical_radio_option5">In Shock</string>
+    <string name="medical_radio_option6">Cold</string>
+    <string name="medical_radio_option7">Clammy</string>
+    <string name="medical_radio_option8">Gray color</string>
+    <string name="medical_radio_option9">Labored breathing</string>
     <string name="fire_radio_option1">Collapsed Building</string>
     <string name="fire_radio_option2">Trapped People</string>
     <string name="fire_radio_option3">Fire near chemical/hazardous material</string>
@@ -30,7 +45,11 @@
     <string name="utility_radio_option2">Water main break</string>
     <string name="utility_radio_option3">Gas main break</string>
     <string name="utility_radio_option4">Internet and Telephone outage</string>
+    <string name="utility_check_box1">Land Line Outage</string>
+    <string name="utility_check_box2">Cell Phone Outage</string>
+    <string name="utility_check_box3">Internet Outage</string>
     <string name="button_submit">Submit</string>
+    <string name="button_trapped">Trapped</string>
     <string name="button_option1">Medical</string>
     <string name="button_option2">Fire</string>
     <string name="button_option3">Police</string>
@@ -45,7 +64,16 @@
     <string name="drawone_text">You Selected Draw One</string>
     <string name="input_yourname">Enter your name</string>
     <string name="image_sos">SOS Image</string>
+    <string name="image_trapped">Trapped Image</string>
+    <string name="image_medical">Medical Image</string>
+    <string name="image_fire">Fire Image</string>
+    <string name="image_police">Police Image</string>
+    <string name="image_traffic">Traffic Image</string>
+    <string name="image_utility">Utility Image</string>
+    <string name="image_thankyou">Thank you Image</string>
+    <string name="image_emergency">Emergency Image</string>
     <string name="text_enterphonenumber">Enter your phone number</string>
     <string name="text_riskscorelabel">Your risk score</string>
     <string name="button_getscore">Get risk score</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

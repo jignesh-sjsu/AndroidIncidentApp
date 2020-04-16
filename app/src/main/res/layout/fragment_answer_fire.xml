@@ -10,49 +10,38 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="166dp"
-            android:layout_height="68dp"
-            android:src="@drawable/sos"
+            android:id="@+id/imageView2"
+            android:layout_width="104dp"
+            android:layout_height="89dp"
+            android:contentDescription="@string/image_fire"
+            android:src="@mipmap/fire"
             app:layout_constraintBottom_toTopOf="@+id/textView2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/fire" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/answer2"
-            app:layout_constraintBottom_toTopOf="@+id/buttonNext"
+            app:layout_constraintBottom_toTopOf="@+id/fireRadioGroup"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.434" />
-
-        <Button
-            android:id="@+id/buttonNext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button_next"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.499" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
         <RadioGroup
             android:id="@+id/fireRadioGroup"
             android:layout_width="281dp"
             android:layout_height="116dp"
-            app:layout_constraintBottom_toTopOf="@+id/buttonNext"
+            app:layout_constraintBottom_toTopOf="@+id/collapsedQuestion"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:layout_constraintVertical_bias="0.503">
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
 
             <RadioButton
                 android:id="@+id/fireRadioButton1"
@@ -72,6 +61,64 @@
                 android:layout_height="wrap_content"
                 android:text="@string/fire_radio_option3" />
         </RadioGroup>
+
+        <TextView
+            android:id="@+id/firChecmicalsQuestion"
+            android:layout_width="269dp"
+            android:layout_height="21dp"
+            android:text="@string/answer2_1"
+            app:layout_constraintBottom_toTopOf="@+id/chemicalsAnswer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/collapsedQuestion" />
+
+        <EditText
+            android:id="@+id/chemicalsAnswer"
+            android:layout_width="266dp"
+            android:layout_height="47dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/buttonNext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/firChecmicalsQuestion" />
+
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chemicalsAnswer" />
+
+        <TextView
+            android:id="@+id/collapsedQuestion"
+            android:layout_width="238dp"
+            android:layout_height="22dp"
+            android:text="@string/answer2_2"
+            app:layout_constraintBottom_toTopOf="@+id/firChecmicalsQuestion"
+            app:layout_constraintEnd_toStartOf="@+id/editText4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fireRadioGroup" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="37dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/firChecmicalsQuestion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.807"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fireRadioGroup"
+            app:layout_constraintVertical_bias="0.338" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

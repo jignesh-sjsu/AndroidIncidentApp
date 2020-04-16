@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModel
 import sjsu.cmpe277.myandroidmulti.R
 import sjsu.cmpe277.myandroidmulti.databinding.WeatherFragmentBinding
 
-class WeatherFragment : Fragment() {
+class   WeatherFragment : Fragment() {
 
 //    companion object {
 //        fun newInstance() = WeatherFragment()
