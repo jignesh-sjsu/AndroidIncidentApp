@@ -43,6 +43,9 @@ class AnswerUtilityFragment : Fragment() {
 
         binding.buttonNext.setOnClickListener { view: View ->
             val checkedId = binding.utilityRadioGroup.checkedRadioButtonId
+            val checkBox1 = binding.outageCheckBox1.isChecked
+            val checkBox2 = binding.outageCheckBox1.isChecked
+            val checkBox3 = binding.outageCheckBox1.isChecked
             if (-1 != checkedId) {
                 var answerIndex = 0
                 when (checkedId) {
@@ -68,6 +71,16 @@ class AnswerUtilityFragment : Fragment() {
                     }
                     else -> {
                         subtypeOption.subtype.value = "Internet and telephone outage"
+                        subtypeOption.additionalTextView1.value = "Lines affected by Outage:"
+                        if(checkBox1) {
+                            subtypeOption.additionalTextView2.value = "Land Line"
+                        }
+                        if(checkBox2) {
+                            subtypeOption.additionalTextView4.value = "Cell Phone"
+                        }
+                        if(checkBox3) {
+                            subtypeOption.additionalTextView5.value = "Internet"
+                        }
                         Navigation.findNavController(view)
                             .navigate(R.id.action_answerUtilityFragment_to_answerFinalFragment)
                     }

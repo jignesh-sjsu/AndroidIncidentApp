@@ -74,11 +74,37 @@ class AnswerFinalFragment : Fragment() {
             binding.textView16.text = tv16.toString()
         })
 
+        viewModel.additionalTextView5.observe(viewLifecycleOwner, Observer { tv17 ->
+            binding.textView17.text = tv17.toString()
+        })
+
+        viewModel.additionalTextView6.observe(viewLifecycleOwner, Observer { tv18 ->
+            binding.textView18.text = tv18.toString()
+        })
+
+        viewModel.additionalTextView7.observe(viewLifecycleOwner, Observer { tv19 ->
+            binding.textView19.text = tv19.toString()
+        })
+
         viewModel.phoneNumber.observe(viewLifecycleOwner, Observer { newPhoneNumber ->
             binding.textViewPhoneNumber.text = newPhoneNumber.toString()
         })
 
         binding.buttonThankyou.setOnClickListener { view: View ->
+            viewModel.emergency.value = ""
+            viewModel.subtype.value = ""
+            viewModel.name.value = ""
+            viewModel.phoneNumber.value = ""
+            viewModel.medicalPatients.value = ""
+            viewModel.medicalFever.value = ""
+            viewModel.additionalTextView1.value = ""
+            viewModel.additionalTextView2.value = ""
+            viewModel.additionalTextView3.value = ""
+            viewModel.additionalTextView4.value = ""
+            viewModel.additionalTextView5.value = ""
+            viewModel.additionalTextView6.value = ""
+            viewModel.additionalTextView7.value = ""
+
           Navigation.findNavController(view).navigate(R.id.action_answerFinalFragment_to_titleFragment)
         }
 

@@ -57,6 +57,12 @@ class AnswerMedicalFragment() : Fragment() {
 
         binding.buttonNext.setOnClickListener {view: View ->
             val checkedId = binding.medicalRadioGroup.checkedRadioButtonId
+            val checkBox1 = binding.medicalCheckBox1.isChecked
+            val checkBox2 = binding.medicalCheckBox2.isChecked
+            val checkBox3 = binding.medicalCheckBox3.isChecked
+            val checkBox4 = binding.medicalCheckBox4.isChecked
+            subtypeOption.additionalTextView1.value = "No of patients:"
+            subtypeOption.additionalTextView2.value = binding.editText.text.toString()
             val checkNoOfPatients = binding.editText
                 if (-1 != checkedId) {
                     var answerIndex = 0
@@ -65,6 +71,7 @@ class AnswerMedicalFragment() : Fragment() {
                         R.id.medicalRadioButton2 -> answerIndex = 2
                         R.id.medicalRadioButton3 -> answerIndex = 3
                         R.id.medicalRadioButton4 -> answerIndex = 4
+                        R.id.MedicalRadioButton5 -> answerIndex = 5
                     }
                     when (answerIndex) {
                         1 -> {
@@ -81,8 +88,27 @@ class AnswerMedicalFragment() : Fragment() {
                             subtypeOption.subtype.value = "Injury"
                             Navigation.findNavController(view).navigate(R.id.action_answerOneFragment_to_answerFinalFragment)
                         }
-                        else -> {
+                        4 -> {
                             subtypeOption.subtype.value = "Fever"
+                            subtypeOption.additionalTextView3.value = "Tempreture:"
+                            subtypeOption.additionalTextView4.value = binding.editText3.text.toString()
+                            Navigation.findNavController(view).navigate(R.id.action_answerOneFragment_to_answerFinalFragment)
+                        }
+                        else -> {
+                            subtypeOption.subtype.value = "In shock"
+                            subtypeOption.additionalTextView3.value = "Type of Shock:"
+                            if(checkBox1) {
+                                subtypeOption.additionalTextView4.value = "Cold"
+                            }
+                            if(checkBox2) {
+                                subtypeOption.additionalTextView5.value = "Clammy"
+                            }
+                            if(checkBox3) {
+                                subtypeOption.additionalTextView6.value = "Gray Color"
+                            }
+                            if(checkBox4) {
+                                subtypeOption.additionalTextView7.value = "Problem Breathing"
+                            }
                             Navigation.findNavController(view).navigate(R.id.action_answerOneFragment_to_answerFinalFragment)
                         }
                     }

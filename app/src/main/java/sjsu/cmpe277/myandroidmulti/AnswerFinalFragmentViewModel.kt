@@ -16,6 +16,9 @@ class AnswerFinalFragmentViewModel: ViewModel() {
     val additionalTextView2 = MutableLiveData<String>()
     val additionalTextView3 = MutableLiveData<String>()
     val additionalTextView4 = MutableLiveData<String>()
+    val additionalTextView5 = MutableLiveData<String>()
+    val additionalTextView6 = MutableLiveData<String>()
+    val additionalTextView7 = MutableLiveData<String>()
 
     init {
         Log.i("QuestionViewModel", "QuestionViewModel created!")
@@ -29,6 +32,9 @@ class AnswerFinalFragmentViewModel: ViewModel() {
         additionalTextView2.value = ""
         additionalTextView3.value = ""
         additionalTextView4.value = ""
+        additionalTextView5.value = ""
+        additionalTextView6.value = ""
+        additionalTextView7.value = ""
 
     }
 

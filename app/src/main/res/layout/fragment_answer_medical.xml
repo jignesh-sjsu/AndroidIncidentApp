@@ -10,11 +10,11 @@
         android:layout_height="match_parent">
 
         <CheckBox
-            android:id="@+id/medicalCheckBox3"
+            android:id="@+id/medicalCheckBox1"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="225dp"
-            android:text="@string/medical_radio_option7"
+            android:text="@string/medical_radio_option6"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -23,7 +23,7 @@
             app:layout_constraintVertical_bias="0.116" />
 
         <CheckBox
-            android:id="@+id/medicalCheckBox"
+            android:id="@+id/medicalCheckBox2"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="120dp"
@@ -130,7 +130,7 @@
             app:layout_constraintVertical_bias="0.172" />
 
         <CheckBox
-            android:id="@+id/medicalCheckBox4"
+            android:id="@+id/medicalCheckBox3"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="@string/medical_radio_option8"
@@ -142,7 +142,7 @@
             app:layout_constraintVertical_bias="0.22" />
 
         <CheckBox
-            android:id="@+id/checkBox4"
+            android:id="@+id/medicalCheckBox4"
             android:layout_width="155dp"
             android:layout_height="31dp"
             android:text="@string/medical_radio_option9"
